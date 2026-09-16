@@ -2,38 +2,133 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Poppy Story</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#111;color:#eee;font-family:Tahoma,Arial,sans-serif;line-height:2}
-header{background:#181818;text-align:center;padding:25px 15px;border-bottom:1px solid #333}
-.logo{font-size:34px;font-weight:bold}
-.subtitle{color:#aaa}
-.container{max-width:900px;margin:auto;padding:20px 15px}
-.cards{display:grid;gap:14px}
-.card{width:100%;padding:20px;border-radius:16px;background:#1b1b1b;color:white;text-align:right;border:1px solid #444;font:inherit;cursor:pointer}
-.card h2{margin:0 0 5px;font-size:20px}
-.card p{margin:0;color:#aaa;font-size:14px}
-.c0{border-color:#666}.project{border-color:#d8ad28}
-.c1{border-color:#3498db}.c2{border-color:#e86aa8}
-.c3{border-color:#9b59b6}.c4{border-color:#49d9ef}.c5{border-color:#ddd}
-.page{display:none}.page.active{display:block}
-.page h1{font-size:26px}
-.page p{color:#ddd;font-size:16px}
-.back{background:#222;color:#fff;border:1px solid #555;border-radius:10px;padding:8px 15px;font:inherit;cursor:pointer}
-.end{border-top:1px solid #333;padding-top:15px;font-weight:bold;color:#aaa}
-footer{text-align:center;border-top:1px solid #333;margin-top:30px;padding:25px 10px;color:#aaa}
-.credit{display:inline-block;border:1px solid #555;border-radius:10px;padding:8px 14px}
-.credit a{color:#d77aa8;text-decoration:none}
+body{
+  margin:0;
+  background:#111;
+  color:#eee;
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:2;
+}
+header{
+  background:#181818;
+  text-align:center;
+  padding:30px 15px;
+  border-bottom:1px solid #333;
+}
+.logo{
+  font-size:34px;
+  font-weight:bold;
+}
+.subtitle{
+  color:#aaa;
+  font-size:14px;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:25px 15px;
+}
+.cards{
+  display:grid;
+  gap:14px;
+}
+.card{
+  width:100%;
+  padding:22px;
+  border:2px solid;
+  border-radius:16px;
+  background:#181818;
+  color:#eee;
+  text-align:right;
+  cursor:pointer;
+  transition:.2s;
+}
+.card:hover{
+  background:#222;
+  transform:translateY(-2px);
+}
+.card h2{
+  margin:0 0 5px;
+  font-size:20px;
+}
+.card p{
+  margin:0;
+  color:#aaa;
+  font-size:14px;
+}
+.c0{border-color:#666}
+.project{border-color:#d8a928}
+.c1{border-color:#3498db}
+.c2{border-color:#e86aa8}
+.c3{border-color:#9b59b6}
+.c4{border-color:#49c6d9}
+.c5{border-color:#aaa}
+
+.page{display:none}
+.page.active{display:block}
+
+.back{
+  border:1px solid #555;
+  background:#222;
+  color:#eee;
+  padding:10px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+.content{
+  background:#181818;
+  padding:25px;
+  border-radius:16px;
+  border:1px solid #333;
+}
+.content h1{
+  margin-top:0;
+  font-size:25px;
+}
+.content p{
+  color:#ddd;
+  font-size:15px;
+}
+.end{
+  margin-top:25px;
+  padding-top:15px;
+  border-top:1px solid #444;
+  color:#aaa;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  color:#aaa;
+  border-top:1px solid #333;
+  margin-top:30px;
+}
+.channel{
+  display:inline-block;
+  border:1px solid #777;
+  padding:8px 16px;
+  border-radius:8px;
+  margin:10px 0 20px;
+}
+.channel a{
+  color:#eee;
+  text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">𝗣𝗼𝗽𝗽𝘆 𝘀𝘁𝗼𝗿𝘆</div>
-<div class="subtitle">داستان و اطلاعات دنیای Poppy Playtime</div>
+  <div class="logo">𝗣𝗼𝗽𝗽𝘆 𝘀𝘁𝗼𝗿𝘆</div>
+  <div class="subtitle">داستان و اطلاعات دنیای Poppy Playtime</div>
 </header>
 
 <main class="container">
@@ -41,7 +136,7 @@ footer{text-align:center;border-top:1px solid #333;margin-top:30px;padding:25px 
 <section id="home" class="page active">
 <div class="cards">
 
-<button class="card c0" data-page="c0">
+<button class="card c0" data-page="ch0">
 <h2>Poppy Playtime — چپتر ۰</h2>
 <p>شروع داستان و آشنایی با کارخانه Playtime Co.</p>
 </button>
@@ -51,226 +146,202 @@ footer{text-align:center;border-top:1px solid #333;margin-top:30px;padding:25px 
 <p>یک بازی جداگانه در دنیای Playtime Co.</p>
 </button>
 
-<button class="card c1" data-page="c1">
+<button class="card c1" data-page="ch1">
 <h2>چپتر ۱: کارخانه‌ی اسباب‌بازی متروکه</h2>
-<p>شروع ماجرا در کارخانه</p>
+<p>ورود به کارخانه و رویارویی با Huggy Wuggy</p>
 </button>
 
-<button class="card c2" data-page="c2">
+<button class="card c2" data-page="ch2">
 <h2>چپتر ۲: فرار از قطار</h2>
-<p>Mommy Long Legs و اتفاقات قطار</p>
+<p>ماجرای Poppy و Mommy Long Legs</p>
 </button>
 
-<button class="card c3" data-page="c3">
+<button class="card c3" data-page="ch3">
 <h2>چپتر ۳: خواب عمیق</h2>
-<p>Playcare و CatNap</p>
+<p>ورود به Playcare و رویارویی با CatNap</p>
 </button>
 
-<button class="card c4" data-page="c4">
+<button class="card c4" data-page="ch4">
 <h2>چپتر ۴: پناهگاه امن</h2>
-<p>Doey و اتفاقات Safe Haven</p>
+<p>رازهای پناهگاه و بازگشت یک موجود آشنا</p>
 </button>
 
-<button class="card c5" data-page="c5">
+<button class="card c5" data-page="ch5">
 <h2>چپتر ۵: چیزهای خراب</h2>
-<p>Prototype و رازهای Data Center</p>
+<p>ادامه‌ی داستان و رازهای Prototype و دکتر</p>
 </button>
 
 </div>
 </section>
 
-
-<section id="c0" class="page">
+<section id="ch0" class="page">
 <button class="back">← بازگشت</button>
+<div class="content">
 <h1>Poppy Playtime — چپتر ۰</h1>
-
 <p>داستان Poppy Playtime در دنیای کارخانه‌ی بزرگ Playtime Co. اتفاق می‌افتد؛ جایی که اسباب‌بازی‌های عجیب و مرموز ساخته می‌شوند.</p>
-
 <p>این شروع داستان، بازیکن را با محیط کارخانه، اسباب‌بازی‌ها و اتفاقات مرموزی که در Playtime Co. رخ داده‌اند آشنا می‌کند.</p>
-
 <p>کارخانه در ظاهر یک کارخانه‌ی معمولی تولید اسباب‌بازی است، اما اتفاقاتی که برای کارکنان آن رخ داده باعث شده این مکان به یک جای مرموز تبدیل شود.</p>
-
 <p>شخصیت اصلی وارد کارخانه می‌شود و برای پیدا کردن حقیقت باید در قسمت‌های مختلف آن جست‌وجو کند، معماها را حل کند و از موانع عبور کند.</p>
-
 <p>در طول مسیر، اسباب‌بازی‌هایی که ظاهراً معمولی هستند، به موجوداتی زنده و خطرناک تبدیل می‌شوند.</p>
-
 <p>یکی از مهم‌ترین اتفاقات این داستان، آشنایی با Huggy Wuggy و سپس Poppy است که مسیر داستان را تغییر می‌دهد.</p>
-
-<p class="end">پایان Poppy Playtime — چپتر ۰</p>
+<div class="end">پایان Poppy Playtime — چپتر ۰</div>
+</div>
 </section>
-
 
 <section id="project" class="page">
 <button class="back">← بازگشت</button>
+<div class="content">
 <h1>Project: Playtime</h1>
-
 <p>Project: Playtime یک بازی جداگانه در دنیای Playtime Co. است و با چپترهای اصلی Poppy Playtime یکی نیست.</p>
-
 <p>در این بازی، بازیکنان وارد بخش‌های مختلف کارخانه می‌شوند و باید برای رسیدن به هدف خود با یکدیگر همکاری کنند.</p>
-
 <p>بازیکنان باید در محیط کارخانه جست‌وجو کنند، پازل‌ها و چالش‌های مختلف را انجام دهند و قطعات موردنیاز را پیدا کنند.</p>
-
 <p>اما محیط کارخانه خالی نیست و موجودات خطرناک می‌توانند بازیکنان را تعقیب کنند.</p>
-
 <p>بنابراین بازیکنان باید همزمان با حل کردن چالش‌ها، مراقب موجودات خطرناک کارخانه نیز باشند.</p>
-
-<p class="end">پایان Project: Playtime</p>
-</section>
-
-
-<section id="c1" class="page">
-<button class="back">← بازگشت</button>
-<h1>چپتر ۱: کارخانه‌ی اسباب‌بازی متروکه</h1>
-
-<p>داستان از جایی شروع می‌شود که شخصیت اصلی، پس از دریافت یک پیام مرموز، به کارخانه‌ی متروکه‌ی Playtime Co. برمی‌گردد. سال‌ها قبل تمام کارکنان کارخانه به‌طور ناگهانی ناپدید شده‌اند.</p>
-
-<p>در داخل کارخانه، محیط تاریک و خالی است و اتفاقات عجیبی رخ می‌دهد. شخصیت اصلی با استفاده از GrabPack راه خود را باز می‌کند و با معماها و موانع مختلف روبه‌رو می‌شود.</p>
-
-<p>اما خیلی زود مشخص می‌شود که کارخانه آن‌قدرها هم خالی نیست؛ عروسک‌ها و اسباب‌بازی‌های زنده در تاریکی منتظر هستند. مهم‌ترین آن‌ها Huggy Wuggy است که تعقیب شخصیت اصلی را آغاز می‌کند.</p>
-
-<p>در پایان، پس از فرار از Huggy Wuggy، داستان با پیدا شدن یک سرنخ درباره‌ی Poppy ادامه پیدا می‌کند.</p>
-
-<p class="end">پایان چپتر ۱: کارخانه اسباب‌بازی متروکه</p>
-</section>
-
-
-<section id="c2" class="page">
-<button class="back">← بازگشت</button>
-<h1>چپتر ۲: فرار از قطار</h1>
-
-<p>پس از اتفاقات چپتر اول، شخصیت اصلی همچنان در کارخانه‌ی متروکه‌ی Playtime Co. گرفتار است و وارد قسمت‌های بزرگ‌تر و خطرناک‌تر کارخانه می‌شود.</p>
-
-<p>در این بخش، Poppy را پیدا می‌کند و متوجه می‌شود که او اطلاعات بیشتری درباره‌ی کارخانه و اتفاقاتی که برای کارکنان افتاده دارد.</p>
-
-<p>اما در مسیر، موجودی خطرناک به نام Mommy Long Legs ظاهر می‌شود. شخصیت اصلی مجبور می‌شود چند بازی مختلف را انجام دهد و از موانع عبور کند.</p>
-
-<p>پس از پشت سر گذاشتن چالش‌ها، رویارویی نهایی با Mommy Long Legs اتفاق می‌افتد و شخصیت اصلی موفق می‌شود از دست او فرار کند.</p>
-
-<p>بعد از این اتفاق، شخصیت اصلی به سمت قطار می‌رود و فکر می‌کند می‌تواند از کارخانه خارج شود؛ اما Poppy مسیر قطار را تغییر می‌دهد.</p>
-
-<p>قطار از مسیر اصلی خارج می‌شود و شخصیت اصلی همچنان در کارخانه گرفتار می‌ماند.</p>
-
-<p class="end">پایان چپتر ۲: فرار از قطار</p>
-</section>
-
-
-<section id="c3" class="page">
-<button class="back">← بازگشت</button>
-<h1>چپتر ۳: خواب عمیق</h1>
-
-<p>پس از اتفاقات چپتر دوم، شخصیت اصلی وارد منطقه‌ای بزرگ و مرموز به نام Playcare می‌شود.</p>
-
-<p>Playcare در گذشته محلی برای نگهداری و مراقبت از کودکان کارخانه بوده است، اما پشت ظاهر آرام آن اتفاقات ترسناکی رخ داده است.</p>
-
-<p>شخصیت اصلی در قسمت‌های مختلف Playcare با محیط‌های متروکه، اتاق‌های قدیمی، آزمایشگاه‌ها و سرنخ‌هایی از گذشته‌ی کارخانه روبه‌رو می‌شود.</p>
-
-<p>در ادامه با CatNap روبه‌رو می‌شود؛ موجودی بزرگ و مرموز که به Prototype وفادار است.</p>
-
-<p>CatNap توانایی پخش کردن گازی قرمز و خواب‌آور را دارد و شخصیت اصلی باید مراقب باشد تحت تأثیر آن قرار نگیرد.</p>
-
-<p>شخصیت اصلی همچنین با DogDay و Miss Delight روبه‌رو می‌شود و سرنخ‌های بیشتری درباره‌ی کودکان و آزمایش‌های کارخانه پیدا می‌کند.</p>
-
-<p>در پایان، اطلاعات بیشتری درباره‌ی Prototype آشکار می‌شود و مشخص می‌شود که خطر اصلی هنوز از بین نرفته است.</p>
-
-<p class="end">پایان چپتر ۳: خواب عمیق</p>
-</section>
-
-
-<section id="c4" class="page">
-<button class="back">← بازگشت</button>
-<h1>چپتر ۴: پناهگاه امن</h1>
-
-<p>پس از اتفاقات چپتر سوم، شخصیت اصلی همچنان در اعماق کارخانه‌ی Playtime Co. گرفتار است و به دنبال حقیقت می‌گردد.</p>
-
-<p>در ادامه، شخصیت اصلی با Poppy همراه می‌شود و در یکی از بخش‌های کارخانه با Doey روبه‌رو می‌شود.</p>
-
-<p>Doey در ابتدا دوستانه به نظر می‌رسد و شخصیت اصلی را به بخش‌های مختلف پناهگاه راهنمایی می‌کند.</p>
-
-<p>اما شخصیت اصلی متوجه می‌شود که پناهگاه آن‌قدرها هم امن نیست و اتفاقات گذشته باعث شده اعتماد میان موجودات از بین برود.</p>
-
-<p>در همین زمان، Kissy Missy نیز در داستان حضور دارد و سرنخ‌هایی درباره‌ی آزمایش‌های مخفی کارخانه آشکار می‌شود.</p>
-
-<p>هرچه شخصیت اصلی جلوتر می‌رود، اطلاعات بیشتری درباره‌ی Prototype و گذشته‌ی Playtime Co. پیدا می‌کند.</p>
-
-<p>در پایان، زمانی که شخصیت اصلی فکر می‌کند ممکن است بتواند از این بخش خارج شود، موجودی آشنا دوباره ظاهر می‌شود:</p>
-
-<p><strong>Huggy Wuggy</strong></p>
-
-<p>بازگشت Huggy Wuggy نشان می‌دهد که خطر هنوز تمام نشده است.</p>
-
-<p class="end">پایان چپتر ۴: پناهگاه امن</p>
-</section>
-
-
-<section id="c5" class="page">
-<button class="back">← بازگشت</button>
-<h1>چپتر ۵: چیزهای خراب</h1>
-
-<p>داستان چپتر پنجم بعد از اتفاقات چپتر چهارم ادامه پیدا می‌کند. شخصیت اصلی پس از سقوط به بخش‌های زیرزمینی کارخانه، در آزمایشگاه‌های زیر Safe Haven قرار می‌گیرد.</p>
-
-<p>در این قسمت موجودات جدیدی به نام Wrongside Outimals دیده می‌شوند و شخصیت اصلی با وسیله‌ای به نام Glowby آشنا می‌شود.</p>
-
-<p>کمی بعد، شخصیت اصلی با Giblet روبه‌رو می‌شود. Giblet در ابتدا به او کمک می‌کند و او را به مخفیگاه خودش می‌برد.</p>
-
-<p>Prototype در نزدیکی آن‌ها حضور دارد و شخصیت اصلی متوجه می‌شود که این موجود هنوز یکی از بزرگ‌ترین تهدیدهای کارخانه است.</p>
-
-<p>شخصیت اصلی در ادامه با Bron و Chum Chompkins روبه‌رو می‌شود و سرنخ‌هایی درباره‌ی اطلاعات مهم کارخانه به دست می‌آورد.</p>
-
-<p>بعد وارد منطقه‌ای به نام Sweet Street می‌شود و با خاطرات و اطلاعات بیشتری درباره‌ی گذشته‌ی کارخانه روبه‌رو می‌شود.</p>
-
-<p>پس از آن با Lily Lovebraids مواجه می‌شود. Lily شخصیت اصلی، Poppy و Kissy Missy را گرفتار می‌کند.</p>
-
-<p>شخصیت اصلی تلاش می‌کند Poppy و Kissy Missy را نجات دهد و در نهایت موفق می‌شود از Lily فرار کند.</p>
-
-<p>پس از آن، Prototype دوباره ظاهر می‌شود و در جریان اتفاقات، Kissy Missy از بین می‌رود.</p>
-
-<p>شخصیت اصلی همراه Giblet و Poppy به سمت Data Center حرکت می‌کند تا اطلاعات مهم کارخانه را پیدا کند.</p>
-
-<p>در نهایت سیستم Data Center فعال می‌شود و نسخه‌ی پشتیبان مربوط به دکتر هارلی ساویر (The Doctor) ظاهر می‌شود.</p>
-
-<p>صدای دکتر از داخل سیستم پخش می‌شود و مشخص می‌شود که اطلاعات مربوط به او هنوز در سیستم باقی مانده است.</p>
-
-<p>سرنوشت Poppy نامعلوم باقی می‌ماند، Huggy Wuggy ناپدید شده و Prototype هنوز زنده است.</p>
-
-<p>حالا اطلاعات مربوط به دکتر هارلی ساویر می‌تواند رازهای بیشتری درباره‌ی گذشته‌ی Playtime Co. آشکار کند.</p>
-
-<p class="end">پایان چپتر ۵: چیزای خراب</p>
-</section>
-
-<footer>
-<div class="credit">
-ساخته شده توسط کانال
-<a href="https://rubika.ir/poppy_play_t_i_m_e" target="_blank">
-@poppy_play_t_i_m_e
-</a>
+<div class="end">پایان Project: Playtime</div>
 </div>
-<br><br>
-به زودی توضیحات جدیدی در این وب‌سایت قرار میگیرد ، همراه ما باشید.
-</footer>
+</section>
+
+<section id="ch1" class="page">
+<button class="back">← بازگشت</button>
+<div class="content">
+<h1>چپتر ۱: کارخانه‌ی اسباب‌بازی متروکه</h1>
+<p>داستان از جایی شروع می‌شود که شخصیت اصلی، پس از دریافت یک پیام مرموز، به کارخانه‌ی متروکه‌ی Playtime Co. برمی‌گردد. سال‌ها قبل تمام کارکنان کارخانه به‌طور ناگهانی ناپدید شده‌اند.</p>
+<p>در داخل کارخانه، محیط تاریک و خالی است و اتفاقات عجیبی رخ می‌دهد. شخصیت اصلی با استفاده از GrabPack راه خود را باز می‌کند و با معماها و موانع مختلف روبه‌رو می‌شود.</p>
+<p>اما خیلی زود مشخص می‌شود که کارخانه آن‌قدرها هم خالی نیست؛ عروسک‌ها و اسباب‌بازی‌های زنده در تاریکی منتظر هستند. مهم‌ترین آن‌ها Huggy Wuggy است که تعقیب شخصیت اصلی را آغاز می‌کند.</p>
+<p>در پایان، پس از فرار از Huggy Wuggy، داستان با پیدا شدن یک سرنخ درباره‌ی Poppy ادامه پیدا می‌کند.</p>
+<div class="end">پایان چپتر ۱: کارخانه اسباب‌بازی متروکه</div>
+</div>
+</section>
+
+<section id="ch2" class="page">
+<button class="back">← بازگشت</button>
+<div class="content">
+<h1>چپتر ۲: فرار از قطار</h1>
+<p>پس از اتفاقات چپتر اول، شخصیت اصلی همچنان در کارخانه‌ی متروکه‌ی Playtime Co. گرفتار است. او پس از پیدا کردن راهی برای ادامه‌ی مسیر، وارد قسمت‌های بزرگ‌تر و خطرناک‌تر کارخانه می‌شود.</p>
+<p>در این بخش، Poppy را پیدا می‌کند و متوجه می‌شود که او اطلاعات بیشتری درباره‌ی کارخانه و اتفاقاتی که برای کارکنان افتاده دارد. Poppy به شخصیت اصلی کمک می‌کند تا مسیر خروج از کارخانه را پیدا کند.</p>
+<p>اما در مسیر، موجودی خطرناک به نام Mommy Long Legs ظاهر می‌شود. او کنترل بخش بازی‌های کارخانه را در اختیار دارد و اجازه نمی‌دهد شخصیت اصلی به‌راحتی از آنجا عبور کند.</p>
+<p>شخصیت اصلی برای ادامه‌ی مسیر مجبور می‌شود چند بازی مختلف را انجام دهد. هر بازی قوانین مخصوص خودش را دارد و شکست خوردن می‌تواند عواقب خطرناکی داشته باشد.</p>
+<p>پس از پشت سر گذاشتن چالش‌ها، رویارویی نهایی با Mommy Long Legs اتفاق می‌افتد. شخصیت اصلی موفق می‌شود از دست او فرار کند و سرنوشت او را به پایان برساند.</p>
+<p>بعد از این اتفاق، شخصیت اصلی دوباره به سمت قطار می‌رود و فکر می‌کند بالاخره می‌تواند از کارخانه خارج شود. او قطار را راه می‌اندازد، اما Poppy مسیر قطار را تغییر می‌دهد.</p>
+<p>قطار از مسیر اصلی خارج می‌شود و به جای خروج از کارخانه، وارد بخش دیگری از مجموعه می‌شود. در نتیجه، شخصیت اصلی همچنان در کارخانه گرفتار می‌ماند و داستان برای چپتر ۳ ادامه پیدا می‌کند.</p>
+<div class="end">پایان چپتر ۲: فرار از قطار</div>
+</div>
+</section>
+
+<section id="ch3" class="page">
+<button class="back">← بازگشت</button>
+<div class="content">
+<h1>چپتر ۳: خواب عمیق</h1>
+<p>پس از اتفاقات چپتر دوم، قطار از مسیر خود خارج می‌شود و شخصیت اصلی در بخش دیگری از کارخانه‌ی Playtime Co. گرفتار می‌شود. او که هنوز به دنبال راه خروج است، وارد منطقه‌ای بسیار بزرگ و مرموز به نام Playcare می‌شود.</p>
+<p>Playcare در گذشته محلی برای نگهداری و مراقبت از کودکان کارخانه بوده است. در نگاه اول، این مکان شبیه یک مرکز مخصوص کودکان به نظر می‌رسد، اما خیلی زود مشخص می‌شود که پشت ظاهر آرام آن، اتفاقات ترسناکی رخ داده است.</p>
+<p>شخصیت اصلی در قسمت‌های مختلف Playcare حرکت می‌کند و با محیط‌های متروکه، اتاق‌های قدیمی، آزمایشگاه‌ها و مکان‌هایی روبه‌رو می‌شود که سرنخ‌هایی از گذشته‌ی کارخانه در آن‌ها باقی مانده است.</p>
+<p>در ادامه، شخصیت اصلی با CatNap روبه‌رو می‌شود؛ موجودی بزرگ و مرموز که یکی از خطرناک‌ترین موجودات این بخش از کارخانه است.</p>
+<p>CatNap به موجودی به نام Prototype وفادار است و شخصیت اصلی را به‌عنوان یک تهدید می‌بیند.</p>
+<p>CatNap توانایی پخش کردن گازی قرمز و خواب‌آور را دارد. شخصیت اصلی باید در محیط‌های مختلف حرکت کند و مراقب باشد تحت تأثیر این گاز قرار نگیرد.</p>
+<p>در مسیر، شخصیت اصلی با DogDay مواجه می‌شود و همچنین با Miss Delight روبه‌رو می‌شود؛ موجودی که در مدرسه‌ی Playcare حضور دارد.</p>
+<p>در بخش‌های مختلف Playcare، شخصیت اصلی سرنخ‌های بیشتری درباره‌ی کودکان، آزمایش‌های کارخانه و موجوداتی که در آنجا ساخته شده‌اند پیدا می‌کند.</p>
+<p>با نزدیک شدن به پایان داستان، رویارویی شخصیت اصلی و CatNap شدیدتر می‌شود. شخصیت اصلی موفق می‌شود با او مقابله کند و به مسیر خود ادامه دهد.</p>
+<p>در پایان، شخصیت اصلی همچنان در کارخانه باقی مانده است و متوجه می‌شود که خطر اصلی هنوز از بین نرفته. اتفاقات چپتر سوم سرنخ‌های مهمی برای ادامه‌ی داستان و چپتر ۴ به وجود می‌آورند.</p>
+<div class="end">پایان چپتر ۳: خواب عمیق</div>
+</div>
+</section>
+
+<section id="ch4" class="page">
+<button class="back">← بازگشت</button>
+<div class="content">
+<h1>چپتر ۴: پناهگاه امن</h1>
+<p>پس از اتفاقات چپتر ۳، شخصیت اصلی همچنان در اعماق کارخانه‌ی Playtime Co. گرفتار است. او حالا اطلاعات بیشتری درباره‌ی Prototype و اتفاقات گذشته‌ی کارخانه دارد.</p>
+<p>در ادامه، شخصیت اصلی با Poppy همراه می‌شود. Poppy تلاش می‌کند راهی برای خروج پیدا کند و در عین حال سرنخ‌هایی درباره‌ی اتفاقات کارخانه به دست آورد.</p>
+<p>شخصیت اصلی در یکی از بخش‌های کارخانه با Doey روبه‌رو می‌شود. Doey در ابتدا موجودی دوستانه به نظر می‌رسد و شخصیت اصلی را به سمت قسمت‌های مختلف پناهگاه راهنمایی می‌کند.</p>
+<p>این پناهگاه محلی است که موجودات و اسباب‌بازی‌ها در آن زندگی می‌کنند و قرار بوده از آن‌ها در برابر خطرهای کارخانه محافظت شود.</p>
+<p>در این قسمت، شخصیت اصلی متوجه می‌شود که پناهگاه آن‌قدرها هم امن نیست. اتفاقات گذشته باعث شده اعتماد میان موجودات از بین برود.</p>
+<p>در همین زمان، Kissy Missy نیز در داستان حضور دارد و سرنخ‌هایی درباره‌ی دکتر و آزمایش‌های مخفی کارخانه آشکار می‌شود.</p>
+<p>هرچه شخصیت اصلی بیشتر جلو می‌رود، متوجه می‌شود که بسیاری از اتفاقات کارخانه تصادفی نبوده‌اند.</p>
+<p>در پایان چپتر ۴، زمانی که شخصیت اصلی فکر می‌کند ممکن است بتواند از این بخش کارخانه خارج شود، اتفاقی غیرمنتظره رخ می‌دهد.</p>
+<p><strong>در تاریکی، موجودی آشنا دوباره ظاهر می‌شود:</strong></p>
+<p><strong>Huggy Wuggy</strong></p>
+<p>بازگشت Huggy Wuggy نشان می‌دهد که خطر هنوز تمام نشده و ماجرای کارخانه وارد مرحله‌ی جدیدی شده است.</p>
+<div class="end">پایان چپتر ۴: پناهگاه امن</div>
+</div>
+</section>
+
+<section id="ch5" class="page">
+<button class="back">← بازگشت</button>
+<div class="content">
+<h1>چپتر ۵: چیزهای خراب</h1>
+<p>داستان چپتر پنجم دقیقاً بعد از اتفاقات چپتر چهارم ادامه پیدا می‌کند. شخصیت اصلی پس از سقوط به بخش‌های زیرزمینی کارخانه، در آزمایشگاه‌های زیر Safe Haven قرار می‌گیرد.</p>
+<p>هنوز فرصت پیدا نکرده که خودش را پیدا کند که صدای Huggy Wuggy را می‌شنود. Huggy که از اتفاقات قبلی جان سالم به در برده، دوباره به دنبال شخصیت اصلی می‌افتد.</p>
+<p>در این قسمت موجودات جدیدی به نام Wrongside Outimals نیز دیده می‌شوند؛ موجوداتی که ظاهرشان با اسباب‌بازی‌های معمولی کارخانه تفاوت دارد.</p>
+<p>در جریان فرار، شخصیت اصلی وسایل قبلی خود را از دست می‌دهد و مجبور می‌شود راه دیگری برای ادامه‌ی مسیر پیدا کند. در همین بخش با وسیله‌ای به نام Glowby آشنا می‌شود که به روشن کردن قسمت‌های تاریک کمک می‌کند.</p>
+<p>کمی بعد، شخصیت اصلی با موجودی به نام Giblet روبه‌رو می‌شود. Giblet در ابتدا به او کمک می‌کند و او را به مخفیگاه خودش می‌برد.</p>
+<p>Prototype در همان نزدیکی حضور دارد و Giblet می‌داند که اگر Prototype آن‌ها را پیدا کند، هیچ‌کدام در امان نخواهند بود.</p>
+<p>شخصیت اصلی دوباره وارد بخش‌های مختلف کارخانه می‌شود و در این مسیر با Bron و بخش‌هایی از آزمایشگاه‌ها و تجهیزات قدیمی روبه‌رو می‌شود.</p>
+<p>در ادامه، شخصیت اصلی با Chum Chompkins آشنا می‌شود. Giblet و Chum تصمیم می‌گیرند به شخصیت اصلی کمک کنند تا به اطلاعات مهم کارخانه دست پیدا کند.</p>
+<p>آن‌ها وارد منطقه‌ای به نام Sweet Street می‌شوند. در جریان اتفاقات این منطقه، اطلاعات بیشتری درباره‌ی گذشته‌ی کارخانه و Huggy Wuggy آشکار می‌شود.</p>
+<p>پس از عبور از این منطقه، شخصیت اصلی با موجودی جدید به نام Lily Lovebraids روبه‌رو می‌شود.</p>
+<p>Lily یک عروسک بزرگ با موهای بسیار بلند است. او شخصیت اصلی را گرفتار می‌کند و به خانه‌ی عروسکی خودش می‌برد.</p>
+<p>در آنجا مشخص می‌شود که Poppy و Kissy Missy نیز توسط Lily گرفتار شده‌اند.</p>
+<p>شخصیت اصلی تلاش می‌کند Poppy و Kissy Missy را نجات دهد و در نهایت فرصت فرار فراهم می‌شود.</p>
+<p>اما Prototype وارد ماجرا می‌شود و درگیری شدیدی شکل می‌گیرد. Kissy Missy برای نجات Poppy به Prototype حمله می‌کند.</p>
+<p>در همین زمان، شخصیت اصلی باید از دست Lily Lovebraids فرار کند و سرانجام موفق می‌شود از دست او فرار کند.</p>
+<p>پس از این اتفاق، شخصیت اصلی دوباره به Giblet و Poppy می‌پیوندد.</p>
+<p>آن‌ها وارد مسیر قطار می‌شوند و تلاش می‌کنند خودشان را به Data Center برسانند.</p>
+<p>اما ناگهان Huggy Wuggy دوباره ظاهر می‌شود و تعقیب و گریز آغاز می‌شود.</p>
+<p>در این میان، Prototype ظاهر می‌شود و دوباره به دنبال شخصیت اصلی می‌افتد.</p>
+<p>Giblet و Poppy تصمیم می‌گیرند وسیله را خراب کنند تا Prototype را متوقف کنند. در لحظه‌ی آخر، آن‌ها از وسیله خارج می‌شوند و سقوط بزرگی اتفاق می‌افتد.</p>
+<p>Prototype زنده می‌ماند و شخصیت اصلی را به داخل مخزنی پر از Poppy Gel می‌اندازد.</p>
+<p>اما Giblet شخصیت اصلی را پیدا می‌کند و او را نجات می‌دهد.</p>
+<p>پس از زنده شدن، شخصیت اصلی همراه Giblet به سمت Data Center می‌رود.</p>
+<p>آن‌ها سرانجام به اتاق اصلی اطلاعات می‌رسند و سیستم را فعال می‌کنند.</p>
+<p>اما چیزی که در پایان می‌بینند عجیب‌تر از چیزی است که انتظار داشتند.</p>
+<p>نسخه‌ی پشتیبان مربوط به دکتر هارلی ساویر (The Doctor) است.</p>
+<p>سیستم فعال می‌شود و صدای دکتر از داخل آن پخش می‌شود؛ یعنی اطلاعات و شخصیت مربوط به دکتر هنوز در سیستم باقی مانده است.</p>
+<p>سرنوشت Poppy نامعلوم باقی می‌ماند، وضعیت Kissy Missy مشخص نیست، Huggy Wuggy دوباره ناپدید شده و Prototype هنوز زنده است.</p>
+<p>از طرف دیگر، اطلاعات مربوط به دکتر هارلی ساویر می‌تواند رازهای مهمی درباره‌ی گذشته‌ی Playtime Co. و اتفاقات کارخانه را آشکار کند.</p>
+<div class="end">پایان چپتر ۵: چیزای خراب</div>
+</div>
+</section>
 
 </main>
 
+<footer>
+<div class="channel">
+ساخته شده توسط کانال
+<a href="https://rubika.ir/poppy_play_t_i_m_e" target="_blank">@poppy_play_t_i_m_e</a>
+</div>
+<br>
+به زودی توضیحات جدیدی در این وب‌سایت قرار میگیرد ، همراه ما باشید.
+</footer>
+
 <script>
 document.addEventListener("DOMContentLoaded",function(){
+
 const pages=document.querySelectorAll(".page");
 const cards=document.querySelectorAll(".card");
 const backs=document.querySelectorAll(".back");
 
-function show(id){
-pages.forEach(p=>p.classList.remove("active"));
+function showPage(id){
+pages.forEach(function(page){
+page.classList.remove("active");
+});
 document.getElementById(id).classList.add("active");
 window.scrollTo(0,0);
 }
 
-cards.forEach(c=>{
-c.addEventListener("click",()=>show(c.dataset.page));
+cards.forEach(function(card){
+card.addEventListener("click",function(){
+showPage(card.dataset.page);
+});
 });
 
-backs.forEach(b=>{
-b.addEventListener("click",()=>show("home"));
+backs.forEach(function(back){
+back.addEventListener("click",function(){
+showPage("home");
 });
+});
+
 });
 </script>
 
 </body>
-  </html>
+                                                                                                            </html>
